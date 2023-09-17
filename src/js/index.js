@@ -15,6 +15,7 @@ var slim = new SlimSelect({
     },
   },
 });
+``;
 
 fetchBreeds()
   .then(select.isVisibilyte)
@@ -31,6 +32,7 @@ fetchBreeds()
 
 function selectBreed(values) {
   fetchCatByBreed(values)
+    .then((wrapper.innerHTML = ''))
     .then(wrapper.classList.add('is-hidden'))
     .then(loader.classList.remove('is-hidden'))
     .then(cat => renderCat(cat))
